@@ -1,0 +1,235 @@
+[Master]
+Implementation=2
+FontFace=Unispace
+FontHeight=-21
+FontWeight=700
+ZoomRatio=1
+[Settings]
+Name=
+EnvVars=
+RefreshPeriod=1000
+EmbeddedImage=rivatuner template 3.png
+PingAddr=
+[General]
+Sources=14
+Tables=3
+Layers=6
+[Source0]
+Name=GPU usage
+Units=%
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000030
+Gpu=00000000
+SrcName=
+[Source1]
+Name=GPU temperature
+Units=°C
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000000
+Gpu=00000000
+SrcName=
+[Source2]
+Name=Power
+Units=W
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000061
+Gpu=00000000
+SrcName=
+[Source3]
+Name=Core clock
+Units=MHz
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000020
+Gpu=00000000
+SrcName=
+[Source4]
+Name=Fan tachometer
+Units=RPM
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000011
+Gpu=00000000
+SrcName=
+[Source5]
+Name=CPU usage
+Units=%
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000090
+Gpu=FFFFFFFF
+SrcName=
+[Source6]
+Name=RAM usage
+Units=MB
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000091
+Gpu=00000000
+SrcName=
+[Source7]
+Name=Framerate
+Units=FPS
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000050
+Gpu=FFFFFFFF
+SrcName=
+[Source8]
+Name=Framerate Avg
+Units=FPS
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000053
+Gpu=FFFFFFFF
+SrcName=
+[Source9]
+Name=Framerate 1% Low
+Units=FPS
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000055
+Gpu=FFFFFFFF
+SrcName=
+[Source10]
+Name=CPU temperature
+Units=°C
+Format=
+Formula=
+Provider=HAL
+ID=CPU temperature
+[Source11]
+Name=CPU clock
+Units=MHz
+Format=
+Formula=
+Provider=HAL
+ID=CPU clock
+[Source12]
+Name=RAM usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=RAM usage percent
+[Source13]
+Name=GPU1 memory usage percent
+Units=%
+Format=
+Formula=
+Provider=HAL
+ID=GPU1 memory usage percent
+[Table0]
+Name=App Performance
+ValueAlignment=-5
+Lines=3
+Line0Name=FPS
+Line0Cells=1
+Line0Cell0Source=Framerate
+Line1Name=FPS Avg
+Line1Cells=1
+Line1Cell0Source=Framerate Avg
+Line2Name=FPS %1 Low
+Line2Cells=1
+Line2Cell0Source=Framerate 1% Low
+[Table1]
+Name=GPU
+ValueAlignment=-5
+Lines=5
+Line0Name=Usage
+Line0Cells=1
+Line0Cell0Source=GPU usage
+Line1Name=Temp
+Line1Cells=1
+Line1Cell0Source=GPU temperature
+Line2Name=Power
+Line2Cells=1
+Line2Cell0Source=Power
+Line3Name=Clock
+Line3Cells=1
+Line3Cell0Source=Core clock
+Line4Name=Mem Usage
+Line4Cells=1
+Line4Cell0Source=GPU1 memory usage percent
+[Table2]
+Name=CPU and Memory
+ValueAlignment=-6
+Lines=5
+Line0Name=CPU Usage
+Line0Cells=1
+Line0Cell0Source=CPU usage
+Line1Name=CPU Temp
+Line1Cells=1
+Line1Cell0Source=CPU temperature
+Line2Name=CPU Clock
+Line2Cells=1
+Line2Cell0Source=CPU clock
+Line3Name=RAM Used %
+Line3Cells=1
+Line3Cell0Source=RAM usage percent
+Line4Name=RAM Used
+Line4Cells=1
+Line4Cell0Source=RAM usage
+[Layer0]
+Name=App Performance
+Text=<S=150><C=FFFFFF>App Performance \n<S=100><C=008080><TT=App Performance>
+PositionX=0
+PositionY=0
+ExtentX=-21
+ExtentY=-4
+ExtentOrigin=0
+[Layer1]
+Name=App Performance
+Text=<S=150><C=FFFFFF>GPU\n<S=100><C=c6e2ff><TT=GPU>
+PositionX=-25
+PositionY=0
+ExtentX=-12
+ExtentY=-5
+ExtentOrigin=0
+[Layer2]
+Name=App Performance
+Text=<S=150><C=FFFFFF>CPU/Mem\n<S=100><C=ff00ff><TT=CPU and Memory>
+PositionX=-43
+PositionY=0
+ExtentX=-12
+ExtentY=-5
+ExtentOrigin=0
+[Layer3]
+Name=GPU Graph
+Text="       <S=150><C=ffffff>GPU\n<S=100><C=2acaea><AI=GPU usage,0,0,0,100,3,128,128,126,11,4,0,0,0>\n\n       <S=200>%GPU usage%%"
+PositionX=-86
+PositionY=0
+ExtentX=-19
+ExtentY=-3
+ExtentOrigin=4
+[Layer4]
+Name=CPU Graph
+Text="    <S=150><C=ffffff>CPU\n<S=100><C=FF0000><AI=CPU usage,0,0,0,100,3,128,128,126,11,4,0,0,0>\n\n       <S=200>%CPU usage%%"
+PositionX=-64
+PositionY=0
+ExtentX=-19
+ExtentY=-2
+ExtentOrigin=4
+FixedAlignment=1
+[Layer5]
+Name=Memory Graph
+Text="  <S=150><C=ffffff>Memory\n<S=100><C=00FF00><AI=RAM usage percent,0,0,0,100,3,128,128,126,11,4,0,0,0>\n\n       <S=200>%RAM usage percent%%"
+PositionX=-110
+PositionY=0
+ExtentX=-17
+ExtentY=-2
+ExtentOrigin=4
+FixedAlignment=1
