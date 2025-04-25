@@ -1,9 +1,9 @@
 [Master]
 Implementation=2
 FontFace=Unispace
-FontHeight=-21
+FontHeight=-8
 FontWeight=700
-ZoomRatio=1
+ZoomRatio=2
 [Settings]
 Name=
 EnvVars=
@@ -11,9 +11,9 @@ RefreshPeriod=1000
 EmbeddedImage=rivatuner template 3.png
 PingAddr=
 [General]
-Sources=14
+Sources=15
 Tables=3
-Layers=6
+Layers=7
 [Source0]
 Name=GPU usage
 Units=%
@@ -132,19 +132,29 @@ Format=
 Formula=
 Provider=HAL
 ID=GPU1 memory usage percent
+[Source14]
+Name=Frametime
+Units=ms
+Format=
+Formula=
+Provider=MSI Afterburner
+SrcId=00000051
+Gpu=FFFFFFFF
+SrcName=
 [Table0]
 Name=App Performance
-ValueAlignment=-5
+ValueAlignment=-8
 Lines=3
-Line0Name=FPS
+Line0Name=Avg
+Line0Color=FFFF8000
 Line0Cells=1
-Line0Cell0Source=Framerate
-Line1Name=FPS Avg
+Line0Cell0Source=Framerate Avg
+Line1Name=%1 Low
 Line1Cells=1
-Line1Cell0Source=Framerate Avg
-Line2Name=FPS %1 Low
+Line1Cell0Source=Framerate 1% Low
+Line2Name=Frametime
 Line2Cells=1
-Line2Cell0Source=Framerate 1% Low
+Line2Cell0Source=Frametime
 [Table1]
 Name=GPU
 ValueAlignment=-5
@@ -185,7 +195,7 @@ Line4Cells=1
 Line4Cell0Source=RAM usage
 [Layer0]
 Name=App Performance
-Text=<S=150><C=FFFFFF>App Performance \n<S=100><C=008080><TT=App Performance>
+Text=<S=150><C=FFFFFF>App Performance \n<C=008080><S=200>FPS   <FR>\n<S=100><TT=App Performance>
 PositionX=0
 PositionY=0
 ExtentX=-21
@@ -233,3 +243,11 @@ ExtentX=-17
 ExtentY=-2
 ExtentOrigin=4
 FixedAlignment=1
+[Layer6]
+Name=Frametime Graph
+Text=<G=Frametime history,-12,-2,1,0,100,0>
+PositionX=0
+PositionY=-7
+ExtentX=-20
+ExtentY=-4
+ExtentOrigin=0
